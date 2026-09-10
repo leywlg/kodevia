@@ -565,7 +565,7 @@ input, select, textarea { font-family: inherit; }
 
 /* Liseré cyan qui se révèle au survol */
 .sector-card::before {
-  content: '';
+  content: none;
   position: absolute;
   left: 0; top: 0; bottom: 0;
   width: 3px;
@@ -668,11 +668,11 @@ input, select, textarea { font-family: inherit; }
 /* ---- Cartes métiers en fond clair (le bloc de section reste noir) ---- */
 #secteurs .sector-card:not(.sector-card--cta) {
   background: #f7f8fa;
-  border-color: rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--brand-deep);
 }
 #secteurs .sector-card:not(.sector-card--cta):hover {
   background: #ffffff;
-  border-color: rgba(0, 183, 199, 0.45);
+  border-color: var(--brand-alt);
 }
 #secteurs .sector-card:not(.sector-card--cta) .sector-name { color: #0d0d12; }
 #secteurs .sector-card:not(.sector-card--cta) p { color: #33333b; }
@@ -1956,7 +1956,7 @@ input, select, textarea { font-family: inherit; }
 
   <div class="section-head centered reveal">
     <h2 class="section-title">Nos clients <span class="accent-text-gradient">en parlent mieux que nous</span></h2>
-    <span class="testi-badge"><span class="testi-badge-stars">★★★★★</span> 5,0 / 5 · clients satisfaits</span>
+    <span class="testi-badge"><span class="testi-badge-stars">★★★★★</span> 5,0 / 5 · +97 clients accompagnés</span>
   </div>
 
   <div class="testi-grid">
@@ -2055,17 +2055,17 @@ input, select, textarea { font-family: inherit; }
       <div class="form-row">
         <div class="field">
           <label for="name">Votre nom</label>
-          <input type="text" id="name" name="name" placeholder="Jean Dupont" required />
+          <input type="text" id="name" name="name" placeholder="Tapez votre nom" required />
         </div>
         <div class="field">
           <label for="phone">Téléphone</label>
-          <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78" required />
+          <input type="tel" id="phone" name="phone" placeholder="Tapez votre numéro" required />
         </div>
       </div>
 
       <div class="field">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="jean@moncommerce.fr" required />
+        <input type="email" id="email" name="email" placeholder="Tapez votre email" required />
       </div>
 
       <div class="field">
@@ -2084,7 +2084,7 @@ input, select, textarea { font-family: inherit; }
 
       <div class="field">
         <label for="message">Votre message</label>
-        <textarea id="message" name="message" placeholder="Parlez-nous de votre activité et de ce que vous cherchez à obtenir."></textarea>
+        <textarea id="message" name="message" placeholder="Tapez votre message"></textarea>
       </div>
 
       <!-- Piège à robots : invisible pour les visiteurs, rempli par les spams -->
