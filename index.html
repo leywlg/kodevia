@@ -511,6 +511,23 @@ input, select, textarea { font-family: inherit; }
 
 .service-list i { flex-shrink: 0; margin-top: 0.15em; font-size: 1rem; color: var(--brand); }
 
+/* ---- Cartes Services en clair (le bloc de section reste noir) ---- */
+#services .service-card {
+  background: #f7f8fa;
+  border: 1px solid var(--brand-deep);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+#services .service-card::before { content: none; }
+#services .service-card:hover {
+  border-color: var(--brand-alt);
+  box-shadow: 0 20px 42px rgba(var(--brand-rgb), 0.2);
+}
+#services .service-card h3 { color: #0d0d12; }
+#services .service-list { border-top-color: rgba(0, 0, 0, 0.1); }
+#services .service-list li { color: #33333b; }
+#services .service-list i { color: var(--brand-alt); }
+
 /* ---------- Repères du carrousel (mobile) ---------- */
 .carousel-dots {
   display: none;
@@ -1541,7 +1558,7 @@ input, select, textarea { font-family: inherit; }
       <h3>Sites &amp; Visibilité</h3>
       <ul class="service-list">
         <li><i class="ph ph-check-circle"></i> Site vitrine ou e-commerce</li>
-        <li><i class="ph ph-check-circle"></i> Landing page de conversion</li>
+        <li><i class="ph ph-check-circle"></i> Page de vente qui convertit</li>
         <li><i class="ph ph-check-circle"></i> SEO &amp; référencement Google</li>
         <li><i class="ph ph-check-circle"></i> Fiche Google My Business</li>
         <li><i class="ph ph-check-circle"></i> Optimisation des avis Google</li>
