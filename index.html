@@ -686,7 +686,26 @@ input, select, textarea { font-family: inherit; }
   border-color: var(--brand-deep);
   color: #ffffff;
 }
-#secteurs .sector-lever { display: none; }
+/* Tag « stratégie » version épurée : label plat cyan, plus de pastille */
+#secteurs .sector-lever {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--brand-deep);
+}
+#secteurs .sector-lever::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin-bottom: 0.55rem;
+  border-radius: 2px;
+  background: var(--brand-deep);
+}
+/* Icônes retirées des cartes métiers */
+#secteurs .sector-icon { display: none; }
 
 @media (max-width: 1024px) { .sector-card { flex-basis: calc((100% - 1.1rem) / 2); } }
 @media (max-width: 620px)  {
