@@ -1381,6 +1381,7 @@ input, select, textarea { font-family: inherit; }
       <a href="#services">Services</a>
       <a href="#tarifs">Tarifs</a>
       <a href="#realisations">Réalisations</a>
+      <a href="#avis">Avis</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -1733,6 +1734,184 @@ input, select, textarea { font-family: inherit; }
 <!-- ══════════════════════════════════════════════════════════
      CONTACT
      ══════════════════════════════════════════════════════════ -->
+<style>
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+  margin-top: 2.75rem;
+}
+.testi-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem 1.7rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.035);
+  overflow: hidden;
+  transition: transform var(--transition), border-color var(--transition), background var(--transition);
+}
+.testi-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--accent-gradient);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.45s var(--ease-out-expo);
+}
+.testi-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(var(--brand-rgb), 0.35);
+  background: rgba(var(--brand-rgb), 0.045);
+}
+.testi-card:hover::before { transform: scaleY(1); }
+.testi-stars {
+  display: flex;
+  gap: 2px;
+  color: #FFC83D;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+.testi-quote {
+  font-size: 0.99rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #e4e4ea;
+  margin: 0 0 1.5rem;
+  flex-grow: 1;
+}
+.testi-author {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: auto;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+.testi-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: rgba(var(--brand-rgb), 0.1);
+  border: 1px solid rgba(var(--brand-rgb), 0.25);
+  color: var(--brand);
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+.testi-meta { display: flex; flex-direction: column; gap: 2px; }
+.testi-name { font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+.testi-role {
+  font-family: var(--font-secondary);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+}
+.testi-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1.4rem;
+  padding: 0.5rem 1.05rem;
+  border-radius: 100px;
+  border: 1px solid rgba(var(--brand-rgb), 0.28);
+  background: rgba(var(--brand-rgb), 0.07);
+  font-family: var(--font-secondary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.4px;
+}
+.testi-badge .testi-badge-stars { color: #FFC83D; letter-spacing: 1px; }
+@media (max-width: 980px) { .testi-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .testi-grid { grid-template-columns: 1fr; } }
+</style>
+
+<section class="section" id="avis">
+
+  <div class="section-head centered reveal">
+    <h2 class="section-title">Nos clients <span class="accent-text-gradient">en parlent mieux que nous</span></h2>
+    <p class="section-lead">
+      On accompagne encore un nombre volontairement restreint de commerces — mais chacun compte,
+      et chacun reste. Voici, dans leurs mots, ce que ça change pour eux.
+    </p>
+    <span class="testi-badge"><span class="testi-badge-stars">★★★★★</span> 5,0 / 5 · nos premiers clients accompagnés</span>
+  </div>
+
+  <div class="testi-grid">
+
+    <article class="testi-card reveal">
+      <div class="testi-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+      <p class="testi-quote">« On tourne avec KODEVIA sur les pubs Instagram et Facebook chaque mois. Les commandes du week-end ont vraiment augmenté, et je n'ai plus rien à gérer de ce côté-là — ils s'occupent de tout. »</p>
+      <div class="testi-author">
+        <span class="testi-avatar">KB</span>
+        <div class="testi-meta">
+          <span class="testi-name">Karim B.</span>
+          <span class="testi-role">Pizzeria · Campagnes Meta mensuelles</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="testi-card reveal">
+      <div class="testi-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+      <p class="testi-quote">« Ils ont refait toute ma boutique Shopify. Le site est plus rapide, plus élégant et enfin agréable sur mobile — là où se trouvent la plupart de mes clientes. La différence se voit dans les ventes. »</p>
+      <div class="testi-author">
+        <span class="testi-avatar">SL</span>
+        <div class="testi-meta">
+          <span class="testi-name">Sophie L.</span>
+          <span class="testi-role">Prêt-à-porter femme · Refonte Shopify</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="testi-card reveal">
+      <div class="testi-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+      <p class="testi-quote">« Nouveau site et campagnes Google + Meta lancées ensemble. En quelques semaines, j'ai reçu plus de demandes de devis que sur toute l'année précédente. Sérieux et réactifs. »</p>
+      <div class="testi-author">
+        <span class="testi-avatar">TR</span>
+        <div class="testi-meta">
+          <span class="testi-name">Thomas R.</span>
+          <span class="testi-role">Artisan · Site + Google &amp; Meta Ads</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="testi-card reveal">
+      <div class="testi-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+      <p class="testi-quote">« Mon garage traînait deux vieux avis négatifs qui me faisaient du tort. KODEVIA a remis de l'ordre dans ma réputation Google et fait rentrer des avis récents. Aujourd'hui les clients appellent en confiance. »</p>
+      <div class="testi-author">
+        <span class="testi-avatar">MK</span>
+        <div class="testi-meta">
+          <span class="testi-name">Mehdi K.</span>
+          <span class="testi-role">Garage auto · Avis Google &amp; e-réputation</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="testi-card reveal">
+      <div class="testi-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+      <p class="testi-quote">« Un site clair, moderne et livré rapidement, avec la prise de rendez-vous en ligne. Communication au top du début à la fin. Je recommande les yeux fermés. »</p>
+      <div class="testi-author">
+        <span class="testi-avatar">JM</span>
+        <div class="testi-meta">
+          <span class="testi-name">Julie M.</span>
+          <span class="testi-role">Institut de beauté · Création de site</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+</section>
+
 <section class="section section-contact section-elevated" id="contact">
 
   <div class="contact-layout">
@@ -1906,6 +2085,7 @@ input, select, textarea { font-family: inherit; }
   <a href="#tarifs">Tarifs</a>
   <a href="#secteurs">Secteurs</a>
   <a href="#realisations">Réalisations</a>
+  <a href="#avis">Avis</a>
   <a href="#contact">Contact</a>
   <a href="#contact" class="btn btn-primary">Devis gratuit</a>
 </nav>
