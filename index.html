@@ -912,6 +912,56 @@ input, select, textarea { font-family: inherit; }
 
 .pricing-note a { color: var(--brand-light); border-bottom: 1px solid rgba(var(--brand-rgb), 0.4); }
 
+/* ---- Variante claire : la section Tarifs sur fond blanc ---- */
+#tarifs { background: #ffffff; }
+#tarifs .section-title { color: #0d0d12; }
+#tarifs .accent-text-gradient {
+  background: linear-gradient(90deg, #009fb0, #00778a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+#tarifs .section-lead { color: #55555f; }
+
+#tarifs .price-card {
+  background: #f7f8fa;
+  border: 1.5px solid rgba(0, 183, 199, 0.55);   /* liseret cyan identique sur les 3 */
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+#tarifs .price-card:hover {
+  border-color: rgba(0, 183, 199, 0.9);
+  box-shadow: 0 20px 42px rgba(0, 183, 199, 0.15);
+}
+/* La carte du milieu ne doit plus être mise en avant : strictement le même style */
+#tarifs .price-card.featured {
+  border: 1.5px solid rgba(0, 183, 199, 0.55);
+  background: #f7f8fa;
+  box-shadow: none;
+}
+#tarifs .price-badge { display: none; }
+#tarifs .price-name { color: #00778a; }
+#tarifs .price-value { color: #0d0d12; }
+#tarifs .price-from,
+#tarifs .price-period { color: #7a7a85; }
+#tarifs .price-tagline { color: #44444d; border-bottom-color: rgba(0, 0, 0, 0.1); }
+#tarifs .price-features li { color: #33333b; }
+#tarifs .price-features i { color: #009fb0; }
+#tarifs .pricing-note { color: #66666f; }
+#tarifs .pricing-note a { color: #00778a; border-bottom-color: rgba(0, 119, 138, 0.4); }
+
+#tarifs .btn-outline {
+  color: #0d0d12;
+  border-color: rgba(0, 0, 0, 0.18);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+#tarifs .btn-outline:hover { background: rgba(0, 0, 0, 0.05); border-color: rgba(0, 0, 0, 0.3); }
+
+#tarifs .carousel-dots button { background: rgba(0, 0, 0, 0.18); }
+#tarifs .carousel-dots button.is-active { background: var(--brand-deep); }
+
 /* ============================================================
    CONTACT
    ============================================================ */
@@ -1500,7 +1550,7 @@ input, select, textarea { font-family: inherit; }
       Des <span class="accent-text-gradient">prix clairs</span>, sans surprise
     </h2>
     <p class="section-lead">
-      Trois formules pour démarrer. Chaque projet reçoit un devis précis sous 24 h.
+      Chaque projet reçoit un devis précis sous 24 h.
     </p>
   </div>
 
@@ -1536,7 +1586,7 @@ input, select, textarea { font-family: inherit; }
         <li><i class="ph ph-check-circle"></i> Création des visuels &amp; vidéos</li>
         <li><i class="ph ph-check-circle"></i> Suivi &amp; optimisation (reporting)</li>
       </ul>
-      <a href="#contact" class="btn btn-primary">Choisir</a>
+      <a href="#contact" class="btn btn-outline">Choisir</a>
     </article>
 
     <article class="price-card reveal">
