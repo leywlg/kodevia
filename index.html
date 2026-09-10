@@ -665,6 +665,33 @@ input, select, textarea { font-family: inherit; }
 
 .sector-card--cta:hover .sector-link { gap: 0.7rem; }
 
+/* ---- Cartes métiers en fond clair (le bloc de section reste noir) ---- */
+#secteurs .sector-card:not(.sector-card--cta) {
+  background: #f7f8fa;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+#secteurs .sector-card:not(.sector-card--cta):hover {
+  background: #ffffff;
+  border-color: rgba(0, 183, 199, 0.45);
+}
+#secteurs .sector-card:not(.sector-card--cta) .sector-name { color: #0d0d12; }
+#secteurs .sector-card:not(.sector-card--cta) p { color: #33333b; }
+#secteurs .sector-card:not(.sector-card--cta) .sector-icon {
+  background: rgba(0, 183, 199, 0.12);
+  border-color: rgba(0, 183, 199, 0.3);
+  color: #00778a;
+}
+#secteurs .sector-card:not(.sector-card--cta):hover .sector-icon {
+  background: var(--brand-deep);
+  border-color: var(--brand-deep);
+  color: #ffffff;
+}
+#secteurs .sector-card:not(.sector-card--cta) .sector-lever {
+  color: #00778a;
+  border-color: rgba(0, 183, 199, 0.35);
+  background: rgba(0, 183, 199, 0.08);
+}
+
 @media (max-width: 1024px) { .sector-card { flex-basis: calc((100% - 1.1rem) / 2); } }
 @media (max-width: 620px)  {
   .sectors-grid { margin-inline: -1.5rem; padding-inline: 1.5rem; scroll-padding-left: 1.5rem; }
