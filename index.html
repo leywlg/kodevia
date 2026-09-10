@@ -679,7 +679,7 @@ input, select, textarea { font-family: inherit; }
 #secteurs .sector-card:not(.sector-card--cta) .sector-icon {
   background: rgba(0, 183, 199, 0.12);
   border-color: rgba(0, 183, 199, 0.3);
-  color: #00778a;
+  color: var(--brand-deep);
 }
 #secteurs .sector-card:not(.sector-card--cta):hover .sector-icon {
   background: var(--brand-deep);
@@ -687,7 +687,7 @@ input, select, textarea { font-family: inherit; }
   color: #ffffff;
 }
 #secteurs .sector-card:not(.sector-card--cta) .sector-lever {
-  color: #00778a;
+  color: var(--brand-deep);
   border-color: rgba(0, 183, 199, 0.35);
   background: rgba(0, 183, 199, 0.08);
 }
@@ -943,7 +943,7 @@ input, select, textarea { font-family: inherit; }
 #tarifs { background: #ffffff; }
 #tarifs .section-title { color: #0d0d12; }
 #tarifs .accent-text-gradient {
-  background: linear-gradient(90deg, #009fb0, #00778a);
+  background: linear-gradient(90deg, var(--brand-alt), var(--brand-deep));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -953,30 +953,30 @@ input, select, textarea { font-family: inherit; }
 
 #tarifs .price-card {
   background: #f7f8fa;
-  border: 1.5px solid rgba(0, 183, 199, 0.55);   /* liseret cyan identique sur les 3 */
+  border: 1.5px solid var(--brand-deep);   /* liseret cyan identique sur les 3 */
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
 }
 #tarifs .price-card:hover {
-  border-color: rgba(0, 183, 199, 0.9);
-  box-shadow: 0 20px 42px rgba(0, 183, 199, 0.15);
+  border-color: var(--brand-alt);
+  box-shadow: 0 20px 42px rgba(var(--brand-rgb), 0.2);
 }
 /* La carte du milieu ne doit plus être mise en avant : strictement le même style */
 #tarifs .price-card.featured {
-  border: 1.5px solid rgba(0, 183, 199, 0.55);
+  border: 1.5px solid var(--brand-deep);
   background: #f7f8fa;
   box-shadow: none;
 }
 #tarifs .price-badge { display: none; }
-#tarifs .price-name { color: #00778a; }
+#tarifs .price-name { color: var(--brand-deep); }
 #tarifs .price-value { color: #0d0d12; }
 #tarifs .price-from,
 #tarifs .price-period { color: #7a7a85; }
 #tarifs .price-tagline { color: #44444d; border-bottom-color: rgba(0, 0, 0, 0.1); }
 #tarifs .price-features li { color: #33333b; }
-#tarifs .price-features i { color: #009fb0; }
+#tarifs .price-features i { color: var(--brand-deep); }
 #tarifs .pricing-note { color: #66666f; }
-#tarifs .pricing-note a { color: #00778a; border-bottom-color: rgba(0, 119, 138, 0.4); }
+#tarifs .pricing-note a { color: var(--brand-deep); border-bottom-color: rgba(var(--brand-rgb), 0.5); }
 
 #tarifs .btn-outline {
   color: #0d0d12;
